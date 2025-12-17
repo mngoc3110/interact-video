@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Interactive Video (SCORM 1.2)</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <h1 id="title">Bài giảng video tương tác</h1>
+
+    <div class="player">
+      <video id="video" controls playsinline preload="metadata">
+        <source src="./media/video.mp4" type="video/mp4" />
+        Trình duyệt không hỗ trợ video.
+      </video>
+
+      <div id="overlay" class="overlay hidden" role="dialog" aria-modal="true">
+        <div class="card">
+          <div class="meta">
+            <span id="qIndex"></span>
+            <span id="timer"></span>
+          </div>
+
+          <h2 id="question"></h2>
+          <div id="choices" class="choices"></div>
+
+          <div class="actions">
+            <button id="continueBtn" class="btn hidden">Tiếp tục</button>
+          </div>
+
+          <p id="feedback" class="feedback"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <button id="restartBtn" class="btn ghost">Làm lại</button>
+      <span id="score"></span>
+      <span id="status"></span>
+    </div>
+
+   
+  </div>
+
+  <script src="./scorm12.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+{
+  "title": "Bài học: Thì hiện tại đơn",
+  "settings": {
+    "showScore": true,
+    "timeLimitSec": 0,
+    "masteryScore": 70,
+    "requireCorrectToContinue": true,
+    "wrongAction": "retry"
+  },
+  "interactions": [
+    {
+      "id": "q1",
+      "time": 40,
+      "type": "mcq",
+      "prompt": "Câu 1: Khi chỉnh sửa một Khối Menu (Header Block) trong Mobirise, bạn cần thực hiện thao tác nào để liên kết một mục menu đến một trang con trong cùng dự án (ví dụ: Trang Sản phẩm)?",
+      "choices": ["Chọn mục Menu, sau đó chọn biểu tượng 'Link' và chọn tên trang cần liên kết.", "Chỉ cần gõ tên trang đó vào mục Menu là đủ.", "Mở tệp HTML của trang đó và chỉnh sửa mã nguồn."],
+      "correctIndex": 1,
+      "explain": ""
+    },
+    {
+      "id": "q2",
+      "time": 127,
+      "type": "mcq",
+      "prompt": "Để tạo một khu vực chứa thông tin cố định như Hotline, Địa chỉ, và Bản quyền ở cuối mỗi trang mà không cần phải chèn lại thủ công, bạn nên sử dụng loại khối nội dung nào trong Mobirise?",
+      "choices": ["Khối Article (Article Block).", "Khối Chân trang (Footer Block).", "Khối Tiêu đề (Header Block).","Khối Bộ sưu tập ảnh (Gallery Block)."],
+      "correctIndex": 2,
+      "explain": ""
+    },
+    {
+      "id": "q3",
+      "time": 145,
+      "type": "mcq",
+      "prompt": "Khi bạn kéo thả một Khối Thư viện Ảnh (Gallery Block) vào trang web Mobirise để trưng bày iPhone, bạn sử dụng chức năng nào để thay thế ảnh mẫu bằng ảnh sản phẩm của mình?",
+      "choices": ["Nhấp vào ảnh cần thay thế và sử dụng công cụ 'Media Image'.", "Kéo và thả trực tiếp tệp ảnh vào khu vực làm việc (Workspace).", "Chỉnh sửa mã nguồn của Khối đó (Code Editor)."],
+      "correctIndex": 1,
+      "explain": ""
+    }
+ ]
+}
