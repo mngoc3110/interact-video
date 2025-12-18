@@ -3,48 +3,58 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Interactive Video (SCORM 1.2)</title>
+  <title>Interactive Video</title>
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-  <div class="wrap">
-    <h1 id="title">Bài giảng video tương tác</h1>
 
-    <div class="player">
-      <video id="video" controls playsinline preload="metadata">
-        <source src="./media/video.mp4" type="video/mp4" />
-        Trình duyệt không hỗ trợ video.
-      </video>
+<!-- MÀN HÌNH BẮT ĐẦU -->
+<div id="startOverlay" class="start-overlay">
+  <div class="start-box">
+    <h2>Bắt đầu bài học</h2>
+    <p>
+      Bài học sẽ hiển thị <b>toàn màn hình</b>.<br>
+      Không thể tua và chỉ được thoát sau khi hoàn thành.
+    </p>
+    <button id="startBtn" class="btn">▶ BẮT ĐẦU</button>
+  </div>
+</div>
 
-      <div id="overlay" class="overlay hidden" role="dialog" aria-modal="true">
-        <div class="card">
-          <div class="meta">
-            <span id="qIndex"></span>
-            <span id="timer"></span>
-          </div>
+<!-- NÚT THOÁT (CHỈ HIỆN KHI XONG) -->
+<button id="exitBtn" class="exit-btn hidden">Thoát</button>
 
-          <h2 id="question"></h2>
-          <div id="choices" class="choices"></div>
+<div class="wrap">
+  <h1 id="title">Bài giảng video tương tác</h1>
 
-          <div class="actions">
-            <button id="continueBtn" class="btn hidden">Tiếp tục</button>
-          </div>
+  <div class="player">
+    <!-- VIDEO: KHÔNG CONTROLS -->
+    <video id="video" playsinline preload="metadata">
+      <source src="./media/video.mp4" type="video/mp4" />
+    </video>
 
-          <p id="feedback" class="feedback"></p>
+    <!-- CÂU HỎI -->
+    <div id="overlay" class="overlay hidden">
+      <div class="card">
+        <div class="meta">
+          <span id="qIndex"></span>
         </div>
+
+        <h2 id="question"></h2>
+        <div id="choices" class="choices"></div>
+
+        <button id="continueBtn" class="btn hidden">Tiếp tục</button>
+        <p id="feedback"></p>
       </div>
     </div>
-
-    <div class="footer">
-      <button id="restartBtn" class="btn ghost">Làm lại</button>
-      <span id="score"></span>
-      <span id="status"></span>
-    </div>
-
-   
   </div>
 
-  <script src="./scorm12.js"></script>
-  <script src="./app.js"></script>
+  <!-- NÚT PLAY / PAUSE DUY NHẤT -->
+  <div class="mini-controls">
+    <button id="playPauseBtn" class="btn">Play</button>
+    <span id="score"></span>
+  </div>
+</div>
+
+<script src="./app.js"></script>
 </body>
 </html>
